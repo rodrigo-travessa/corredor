@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxbbgbx4ry1x5"]
+
+[ext_resource type="Script" uid="uid://dnlqxo3tsdcug" path="res://Scenes/Weapons/WeaponBase/weapon_base.gd" id="1_lj8yv"]
+[ext_resource type="PackedScene" uid="uid://7a6ij2kpae5f" path="res://Scenes/bullet/bullet.tscn" id="2_76syf"]
+
+[node name="WeaponStandard" type="Node2D" node_paths=PackedStringArray("timer")]
+script = ExtResource("1_lj8yv")
+timer = NodePath("Timer")
+bullet_scene = ExtResource("2_76syf")
+metadata/_custom_type_script = "uid://dnlqxo3tsdcug"
+
+[node name="Timer" type="Timer" parent="."]

@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfeth4gcflskv"]
+
+[ext_resource type="Script" uid="uid://cxfnlw86fs7xg" path="res://Scenes/UpgradeGate/upgrade_scene_choice.gd" id="1_5r3cl"]
+[ext_resource type="PackedScene" uid="uid://di5fng1srqykk" path="res://Scenes/UpgradeGate/UpgradeGate.tscn" id="1_nc1dh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nc1dh"]
+size = Vector2(122, 36)
+
+[node name="UpgradeSceneChoice" type="Node2D"]
+script = ExtResource("1_5r3cl")
+
+[node name="UpgradeGate1" parent="." instance=ExtResource("1_nc1dh")]
+position = Vector2(-250, 0)
+
+[node name="UpgradeGate2" parent="." instance=ExtResource("1_nc1dh")]
+
+[node name="UpgradeGate3" parent="." instance=ExtResource("1_nc1dh")]
+position = Vector2(250, 0)
+
+[node name="Upgrade 1" type="Area2D" parent="."]
+position = Vector2(-249, 0)
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Upgrade 1"]
+position = Vector2(0, -24)
+shape = SubResource("RectangleShape2D_nc1dh")
+
+[node name="Upgrade 2" type="Area2D" parent="."]
+position = Vector2(1, 0)
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Upgrade 2"]
+position = Vector2(0, -24)
+shape = SubResource("RectangleShape2D_nc1dh")
+
+[node name="Upgrade 3" type="Area2D" parent="."]
+position = Vector2(250, 0)
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Upgrade 3"]
+position = Vector2(0, -24)
+shape = SubResource("RectangleShape2D_nc1dh")

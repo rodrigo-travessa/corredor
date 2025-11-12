@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bf8r676owfv3q"]
+
+[ext_resource type="Script" uid="uid://d3nytp1l384t4" path="res://components/HitboxHurtboxHealthSystem/health_component.gd" id="1_84tc5"]
+
+[node name="HealthComponent" type="Node"]
+script = ExtResource("1_84tc5")

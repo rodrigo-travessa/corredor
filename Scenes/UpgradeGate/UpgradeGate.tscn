@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://di5fng1srqykk"]
+
+[ext_resource type="Texture2D" uid="uid://ddwkoxa8spki8" path="res://Scenes/UpgradeGate/Gate.png" id="1_0ypdm"]
+
+[node name="UpgradeGate" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1, -32)
+texture = ExtResource("1_0ypdm")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = -59.0
+offset_top = -40.0
+offset_right = 61.0
+offset_bottom = -6.0
+theme_override_font_sizes/font_size = 15
+horizontal_alignment = 1
+vertical_alignment = 1

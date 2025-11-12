@@ -1,0 +1,55 @@
+Enemies
+	Exp drops?
+	Gold drops?
+	Other enemies?
+	Boss?
+
+Shop?
+	Player stats
+	Bullet Modifiers
+
+Scene Manager
+	scene transition
+	loading screens
+	exit previous scene gracefully
+	pass data needed for the new scene
+	load new scene
+
+Player Manager
+	Save & Load of player Stats and equipment
+	get player current position easily (Enemy follow mechanics)
+
+Upgrade System using Strategy Pattern
+
+CleanUp weapon script logic to update it's own stats instead of using the player stats.
+Improve weapon Script and applu sprites and animations
+
+Player
+	sprites
+	animations
+	health system
+	being able to die
+	exp, lvl up system
+
+Game Manager
+	win/lose conditions
+	player level
+	highscore and score
+	save/load
+
+
+---------------------- DONE -----------------------
+Player Stats
+	atk
+	atk speed
+	hp
+	move speed
+	multishot
+
+Player Manager
+	Getter for Player (pointer)
+	Getter for player stats
+	Methods to update stats
+
+Gates
+	Bonus to Player Stats
