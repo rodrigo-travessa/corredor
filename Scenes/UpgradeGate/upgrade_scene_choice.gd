@@ -22,6 +22,9 @@ func _ready() -> void:
 	upgrade_2.area_entered.connect(on_area2_entered)
 	upgrade_3.area_entered.connect(on_area3_entered)
 
+func _process(delta: float) -> void:
+	global_position.y += delta * 90
+
 func on_area1_entered(other):
 	if other.get_parent() is Player:
 		other.get_parent().player_stats.base_attack_damage += 5
@@ -30,7 +33,7 @@ func on_area1_entered(other):
 
 func on_area2_entered(other):
 	if other.get_parent() is Player:
-		other.get_parent().player_stats.base_attack_speed += 400
+		other.get_parent().player_stats.base_attack_speed += other.get_parent().player_stats.base_attack_speed
 		other.get_parent().update_weapon_stats()
 		queue_free()
 

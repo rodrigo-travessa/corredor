@@ -6,6 +6,7 @@
 [node name="WeaponStandard" type="Node2D" node_paths=PackedStringArray("timer")]
 script = ExtResource("1_lj8yv")
 timer = NodePath("Timer")
+multishot_angle = 8
 bullet_scene = ExtResource("2_76syf")
 metadata/_custom_type_script = "uid://dnlqxo3tsdcug"
 

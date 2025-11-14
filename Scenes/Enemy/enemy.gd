@@ -13,6 +13,9 @@ func _process(_delta: float) -> void:
 	else:
 		animated_sprite_2d.flip_h = true
 
+	if global_position.y >= 800:
+		queue_free()
+
 func _physics_process(_delta: float) -> void:
 	move_and_slide()
 

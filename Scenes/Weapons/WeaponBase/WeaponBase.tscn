@@ -6,6 +6,7 @@
 [node name="WeaponBase" type="Node2D" node_paths=PackedStringArray("timer")]
 script = ExtResource("1_husse")
 timer = NodePath("Timer")
+multishot_angle = 3
 bullet_scene = ExtResource("2_tkoff")
 
 [node name="Timer" type="Timer" parent="."]

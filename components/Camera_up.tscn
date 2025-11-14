@@ -1,25 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://db0kge87cbsc8"]
+[gd_scene load_steps=2 format=3 uid="uid://db0kge87cbsc8"]
 
 [ext_resource type="Script" uid="uid://ccuckphywnfqb" path="res://components/camera_2d.gd" id="1_f2rki"]
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_f2rki"]
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_nbwu0"]
 
 [node name="Camera2D" type="Camera2D"]
 offset = Vector2(0, -250)
 script = ExtResource("1_f2rki")
-SPEED = 30
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1, -320)
-rotation = -3.1415927
-shape = SubResource("WorldBoundaryShape2D_f2rki")
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(0, 321)
-shape = SubResource("WorldBoundaryShape2D_nbwu0")

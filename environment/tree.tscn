@@ -2,8 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b31jxr536flk7" path="res://environment/Captura de tela 2025-11-05 113309.png" id="1_brfkd"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_brfkd"]
-size = Vector2(34.641827, 41.10929)
+[sub_resource type="CircleShape2D" id="CircleShape2D_ow7ka"]
 
 [node name="Tree" type="StaticBody2D"]
 collision_layer = 3
@@ -16,6 +15,6 @@ scale = Vector2(0.36684236, 0.40797842)
 texture = ExtResource("1_brfkd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.50000143, -35)
+position = Vector2(7, -22)
 scale = Vector2(1.7608773, 1.6541275)
-shape = SubResource("RectangleShape2D_brfkd")
+shape = SubResource("CircleShape2D_ow7ka")

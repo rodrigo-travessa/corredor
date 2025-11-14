@@ -25,7 +25,7 @@ func Update(delta:float):
 func Update_Physics(_delta: float):
 	if player:
 		var direction = PlayerManager.get_player_position() - Parent.global_position
-		if direction.length() < 200:
+		if direction.length() < 1500:
 			TransitionTo.emit(self, "follow")
 			return
 		if Parent:

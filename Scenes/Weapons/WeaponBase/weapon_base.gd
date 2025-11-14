@@ -4,7 +4,7 @@ class_name WeaponBase
 @export var weapon_sprite: Sprite2D
 @export var animation_player: AnimationPlayer
 @export var timer: Timer
-@export var multishot_angle : int = 15
+@export var multishot_angle: int
 @export var bullet_scene: PackedScene
 
 const degree_to_radian = 0.017
@@ -31,11 +31,13 @@ func _ready() -> void:
 func shoot_bullet():
 	if timer.is_stopped():
 		var direction = global_position.direction_to(get_global_mouse_position())
+		var additional_multi_angle  = ((player.global_position - get_global_mouse_position() ).length()) / 100
 		for i in range(player_stats.base_multishot):
 			var magnitude = i + 1
 			var deviation = magnitude * 15
-			var positive_direction = Vector2.from_angle(direction.angle() + (degree_to_radian * multishot_angle) * magnitude)
-			var negative_direction = Vector2.from_angle(direction.angle() - (degree_to_radian * multishot_angle) * magnitude)
+			var clamped_angle = degree_to_radian * clampf((multishot_angle - additional_multi_angle), 1, 25)
+			var positive_direction = Vector2.from_angle(direction.angle() + clamped_angle * magnitude)
+			var negative_direction = Vector2.from_angle(direction.angle() - clamped_angle * magnitude)
 			create_bullet(positive_direction)
 			create_bullet(negative_direction)
 
@@ -50,11 +52,8 @@ func reload():
 	pass
 
 func update_weapon_stats(new_player_stats):
-	print("weapon stats upgraded")
-	print(timer.wait_time)
 	player_stats = new_player_stats
 	timer.wait_time = 100/player_stats.base_attack_speed
-	print(timer.wait_time)
 
 func create_bullet(direction):
 		var bullet:Node2D = bullet_scene.instantiate()

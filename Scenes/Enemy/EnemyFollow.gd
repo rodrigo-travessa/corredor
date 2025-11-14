@@ -2,7 +2,7 @@ extends State
 class_name EnemyFollow
 
 @export var Parent : CharacterBody2D
-@export var move_speed : float = 70
+@export var move_speed : float = 130
 
 var player : CharacterBody2D
 
